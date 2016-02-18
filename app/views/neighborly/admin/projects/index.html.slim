@@ -121,7 +121,7 @@
                     ul[id="dropdown-#{project.id}" data-dropdown-content class="f-dropdown"]
                       li
                         = link_to populate_contribution_project_path(project) do
-                          = t('.populate_contrib')
+                          = t('.populate_contribution')
                       - if project.can_approve?
                         li
                           = link_to  approve_project_path(project), method: :put  do
