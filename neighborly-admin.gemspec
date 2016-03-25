@@ -1,26 +1,15 @@
 # -*- encoding: utf-8 -*-
-<<<<<<< HEAD
 # stub: neighborly-admin 1.2.0 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "neighborly-admin"
   s.version = "1.2.0"
-=======
-# stub: neighborly-admin 1.2.0 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "neighborly-admin"
-  s.version = "1.2.0"
->>>>>>> caf37a91d06bc0c7883b65b3a0161fffcad4d6d8
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Josemar Luedke"]
-<<<<<<< HEAD
   s.date = "2016-03-09"
-=======
   s.date = "2015-08-07"
->>>>>>> caf37a91d06bc0c7883b65b3a0161fffcad4d6d8
   s.description = "This is the admin of Neighbor.ly"
   s.email = ["josemarluedke@gmail.com"]
   s.executables = ["rails"]
