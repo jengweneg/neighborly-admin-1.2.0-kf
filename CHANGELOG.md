@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.1
+* Include paid fonction in admin dashboard
+
 ## 1.2.0
 
 * Import Statistics from the main app
