@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neighborly::Admin
 
 [![Build Status](https://travis-ci.org/neighborly/neighborly-admin.png?branch=master)](https://travis-ci.org/neighborly/neighborly-admin) [![Code Climate](https://codeclimate.com/github/neighborly/neighborly-admin.png)](https://codeclimate.com/github/neighborly/neighborly-admin)
@@ -71,3 +72,6 @@ $ bundle exec rake spec
 ## License
 
 Licensed under the [MIT license](LICENSE.txt).
+=======
+# neighborly-admin-1.2.0-kf
+>>>>>>> fc79a3cb7caf2e1c6953d446d2eea217e2476d4d

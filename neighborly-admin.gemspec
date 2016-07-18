@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Josemar Luedke"]
-  s.date = "2016-06-03"
+  s.date = "2015-08-07"
   s.description = "This is the admin of Neighbor.ly"
   s.email = ["josemarluedke@gmail.com"]
   s.executables = ["rails"]

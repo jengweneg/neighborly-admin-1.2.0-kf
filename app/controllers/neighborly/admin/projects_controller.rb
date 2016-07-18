@@ -9,7 +9,7 @@ module Neighborly::Admin
       @total_projects = Project.count
     end
 
-    [:launch, :reject, :push_to_draft, :push_to_request_funds, :push_to_fraud_suspiscion, :approve].each do |name|
+    [:launch, :reject, :push_to_draft, :push_to_request_funds, :push_to_fraud_suspiscion, :push_to_paid, :approve].each do |name|
       define_method name do
         @project = Project.find_by_permalink params[:id]
         @project.send("#{name.to_s}!")

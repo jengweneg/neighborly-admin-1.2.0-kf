@@ -59,6 +59,7 @@
               th= t('.key')
               th= t('.anonymous')
               th= t('.credits')
+              th= t('.id')
               th= t('.state')
               th
           tbody
@@ -120,8 +121,8 @@
                 td.key= contribution.key
                 td.checkbox= best_in_place contribution, :anonymous, type: :checkbox, collection: [t('words._no'), t('words._yes')]
                 td= (contribution.credits ? t('words._yes') : t('words._no'))
+                td= best_in_place contribution,:id, type: :input
                 td= contribution.state
-                td
                   = link_to 'javascript:void(0);', class: 'button tiny secondary', data: {dropdown: "dropdown-#{contribution.id}"} do
                     i.icon-et-down-dir
                 ul[id="dropdown-#{contribution.id}" data-dropdown-content class="f-dropdown"]
