@@ -21,6 +21,7 @@ Neighborly::Admin::Engine.routes.draw do
       put 'push_to_draft'
       put 'push_to_request_funds'
       put 'push_to_paid'
+      put 'push_to_fraud_suspiscion' 
       put 'approve'
       get 'populate_contribution'
       post 'populate'
