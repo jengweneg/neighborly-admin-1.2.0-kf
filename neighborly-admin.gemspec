@@ -24,25 +24,25 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>)
-      s.add_runtime_dependency(%q<best_in_place>, ["~> 3.0.0.rc1"])
-      s.add_runtime_dependency(%q<postgres-copy>, ["~> 0.8.0"])
-      s.add_development_dependency(%q<rake>, ["~> 10.2"])
-      s.add_development_dependency(%q<rspec-rails>, ["~> 2.14"])
-      s.add_development_dependency(%q<factory_girl_rails>, ["~> 4.3"])
+      s.add_runtime_dependency(%q<best_in_place>)
+      s.add_runtime_dependency(%q<postgres-copy>)
+      s.add_development_dependency(%q<rake>)
+      s.add_development_dependency(%q<rspec-rails>)
+      s.add_development_dependency(%q<factory_girl_rails>)
     else
       s.add_dependency(%q<rails>)
-      s.add_dependency(%q<best_in_place>, ["~> 3.0.0.rc1"])
-      s.add_dependency(%q<postgres-copy>, ["~> 0.8.0"])
-      s.add_dependency(%q<rake>, ["~> 10.2"])
-      s.add_dependency(%q<rspec-rails>, ["~> 2.14"])
-      s.add_dependency(%q<factory_girl_rails>, ["~> 4.3"])
+      s.add_dependency(%q<best_in_place>)
+      s.add_dependency(%q<postgres-copy>)
+      s.add_dependency(%q<rake>)
+      s.add_dependency(%q<rspec-rails>)
+      s.add_dependency(%q<factory_girl_rails>)
     end
   else
     s.add_dependency(%q<rails>)
-    s.add_dependency(%q<best_in_place>, ["~> 3.0.0.rc1"])
-    s.add_dependency(%q<postgres-copy>, ["~> 0.8.0"])
-    s.add_dependency(%q<rake>, ["~> 10.2"])
-    s.add_dependency(%q<rspec-rails>, ["~> 2.14"])
-    s.add_dependency(%q<factory_girl_rails>, ["~> 4.3"])
+    s.add_dependency(%q<best_in_place>)
+    s.add_dependency(%q<postgres-copy>)
+    s.add_dependency(%q<rake>)
+    s.add_dependency(%q<rspec-rails>)
+    s.add_dependency(%q<factory_girl_rails>)
   end
 end
