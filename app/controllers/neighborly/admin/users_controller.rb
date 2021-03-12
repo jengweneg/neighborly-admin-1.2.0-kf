@@ -1,8 +1,8 @@
 module Neighborly::Admin
   class UsersController < BaseController
     inherit_resources
-    before_filter :set_title
-    before_filter :set_totals
+    before_action :set_title
+    before_action :set_totals
 
     has_scope :by_id, :by_name, :by_email, :by_key, :has_credits, :has_credits_difference, only: :index
 

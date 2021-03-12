@@ -4,10 +4,10 @@ module Neighborly::Admin
   end
 
   class BaseController < ::ApplicationController
-    skip_before_filter :set_persistent_warning
+    skip_before_action :set_persistent_warning
     inherit_resources
 
-    before_filter do
+    before_action do
       authorize Neighborly::Admin, :access?
     end
 
