@@ -4,7 +4,7 @@ module Neighborly::Admin
   end
 
   class BaseController < ::ApplicationController
-    skip_before_action :set_persistent_warning
+    #skip_before_action :set_persistent_warning
     inherit_resources
 
     before_action do
