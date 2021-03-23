@@ -3,7 +3,7 @@ module Neighborly::Admin
     AdminPolicy
   end
 
-  class BaseController < InheritedResources::Base
+  class BaseController < ::ApplicationController
     #skip_before_action :set_persistent_warning
     inherit_resources
 
