@@ -29,7 +29,7 @@
           .large-12.columns.text-right
             = submit_tag t('.submit'), class: 'button'
             | &nbsp;
-            = link_to t('.download_search_report'), financials_path(params: params, format: :csv), class: 'button secondary'
+            = link_to t('.download_search_report'), financials_path(params: params.to_enum.to_h.except(:action, :controller), format: :csv), class: 'button secondary'
       .row
         .large-6.columns.text-left
           = paginate @projects
