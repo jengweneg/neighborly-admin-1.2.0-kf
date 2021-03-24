@@ -23,7 +23,8 @@ module Neighborly::Admin
 
     protected
     def projects
-      apply_scopes(Project).includes(:user).order(Arel.sql("CASE state WHEN 'successful' THEN 1 WHEN 'waiting_funds' THEN 2 ELSE 3 END, (projects.expires_at)::date DESc"))
+      Project.all
+      #apply_scopes(Project).includes(:user).order(Arel.sql("CASE state WHEN 'successful' THEN 1 WHEN 'waiting_funds' THEN 2 ELSE 3 END, (projects.expires_at)::date DESc"))
     end
 
     def collection
