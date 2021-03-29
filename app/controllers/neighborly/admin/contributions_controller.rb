@@ -23,7 +23,7 @@ module Neighborly::Admin
 
     protected
     def collection
-      @contributions = apply_scopes(end_of_association_chain).without_state('deleted').order("contributions.created_at DESC").page(params[:page])
+      @contributions = apply_scopes(end_of_association_chain).without_state('deleted').order("contributions.created_at DESC").page(params[:page]) || []
     end
 
     def permitted_params
