@@ -63,7 +63,7 @@
                   td= link_to project.name, main_app.project_path(project), target: 'blank'
                   td= link_to project.user.name, main_app.user_path(project.user, anchor: :settings), target: '_blank'
                   td= project.goal
-                  td= project.contributions.contributions.sum(:value)
+                  td= project.contributions.sum(:value)
                   td= number_to_currency project.total_payment_service_fee, precision: 2
                   - platform_fee = Configuration[:platform_fee].to_f * project.pledged
                   td
