@@ -61,9 +61,9 @@
               - @projects.each do |project|
                 tr id=project.id
                   td= link_to project.name, main_app.project_path(project), target: 'blank'
-                  td= link_to project.user.display_name, main_app.user_path(project.user, anchor: :settings), target: '_blank'
-                  td= project.display_goal
-                  td= project.display_pledged
+                  td= link_to project.user.name, main_app.user_path(project.user, anchor: :settings), target: '_blank'
+                  td= project.goal
+                  td= project.contributions.contributions.sum(:value)
                   td= number_to_currency project.total_payment_service_fee, precision: 2
                   - platform_fee = Configuration[:platform_fee].to_f * project.pledged
                   td
@@ -71,7 +71,7 @@
                   td
                     = number_to_currency ((project.pledged*0.87)), precistion: 2
                   td
-                    = project.display_expires_at
+                    = project.expires_at.strftime('%d/%m/%Y').to_date
                   td
                     = link_to t('.contribution_report'), reports_contribution_reports_path(project_id: project.id, format: :csv)
                   td
