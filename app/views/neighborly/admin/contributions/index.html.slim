@@ -116,7 +116,7 @@
                   ul[id="dropdown-reward-#{contribution.id}" data-dropdown-content class="f-dropdown"]
                     li title=("#{t('.no_reward')}" ) = link_to t('.no_reward'), change_reward_contribution_path(contribution, reward_id: nil), method: :put
                     - contribution.available_rewards.each do |reward|
-                      li title=("#{reward.display_minimum} - #{reward.description}" ) = link_to reward.minimum_value, change_reward_contribution_path(contribution, reward_id: reward.id, local_params: params, method: :put
+                      li title=("#{reward.display_minimum} - #{reward.description}" ) = link_to reward.minimum_value, change_reward_contribution_path(contribution, reward_id: reward.id, local_params: params), method: :put
 
                 td.key= contribution.key
                 td.checkbox= best_in_place contribution, :anonymous, type: :checkbox, collection: [t('words._no'), t('words._yes')]
