@@ -5,7 +5,7 @@ module Neighborly::Admin
     actions :index
 
     def index
-
+      @statistics = collection.first || Statistics.new
     end
   end
 end
