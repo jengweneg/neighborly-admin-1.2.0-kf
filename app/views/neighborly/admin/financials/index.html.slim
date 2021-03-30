@@ -25,11 +25,12 @@
             = text_field_tag :user_name_contains, params[:user_name_contains]
           .large-6.columns
             = label_tag :with_state, t('.with_state')
-            = select_tag :with_state, options_for_select(Project.state_machines[:state].states.map(&:name), params[:with_state]), include_blank: true
+            = select_tag :with_state, options_for_select(Project.state_machines[:state].states.map(&:name), params[:with_state])
           .large-12.columns.text-right
             = submit_tag t('.submit'), class: 'button'
             | &nbsp;
-            = link_to t('.download_search_report'), financials_path(params: params.to_enum.to_h.except(:action, :controller), format: :csv), class: 'button secondary'
+            - if params.include?('by_permalink')
+              = link_to t('.download_search_report'), financials_path(format: :csv), class: 'button secondary'
       .row
         .large-6.columns.text-left
           = paginate @projects
