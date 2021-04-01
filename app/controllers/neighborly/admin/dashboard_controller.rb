@@ -14,8 +14,6 @@ module Neighborly::Admin
         total_contributions: 0,
         total_contributors: 0,
         total_contributed: 0,
-        total_contributed: 0,
-        total_projects: 0,
         total_projects: 0,
         total_projects_success: 0,
         total_projects_online: 0,
