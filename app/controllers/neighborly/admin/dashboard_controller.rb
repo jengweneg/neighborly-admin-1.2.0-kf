@@ -5,20 +5,17 @@ module Neighborly::Admin
     actions :index
 
     def index
-      @statistics = collection.first || Statistics.new(
-        total_users: 0,
-        total_organization_users:0,
-        total_personal_users: 0,
-        total_channel_users: 0,
-        total_communities: 0,
-        total_contributions: 0,
-        total_contributors: 0,
-        total_contributed: 0,
-        total_projects: 0,
-        total_projects_success: 0,
-        total_projects_online: 0,
-        total_projects_draft: 0,
-        total_projects_soon: 0,
+      @statistics = Statistics.new(
+        total_users: User.count,
+        total_organization_users: Organization.count,
+        total_contributions: Contribution.count,
+        total_contributors: Contribution.distinct.count(:user_id),
+        total_contributed: Contribution.sum(:value),
+        total_projects: Project.count,
+        total_projects_success: Project.with_state('successful').count,
+        total_projects_online: Project.with_state('online').count,
+        total_projects_draft: Project.with_state('draft').count,
+        total_projects_soon: Project.with_state('soon').count,
         )
     end
   end
